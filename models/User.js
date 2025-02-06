@@ -26,11 +26,19 @@ const User = sequelize.define(
             type: DataTypes.STRING,
             allowNull: true
         },
+        role: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        refresh_token: {
+            type: DataTypes.STRING,
+            allowNull: true
+        }
     },
     {
         tableName: 'users',  // ✅ Changed to plural convention
         timestamps: true,
-        paranoid: true,
+        // paranoid: true,
         freezeTableName: true,
         underscored: true
     }

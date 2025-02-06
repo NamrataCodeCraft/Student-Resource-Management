@@ -29,7 +29,7 @@ const Student = sequelize.define(
     {
         tableName: 'students',
         timestamps: true,
-        paranoid: true,
+        // paranoid: true,
         freezeTableName: true,
         underscored: true
     }

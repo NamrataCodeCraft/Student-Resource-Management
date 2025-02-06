@@ -7,6 +7,10 @@ const sequelize = new Sequelize('testdbs', 'postgres', 'nishu', {
     logging: false,  // Optional: Disable logging of SQL queries
 });
 
+// const sequelize = new Sequelize('', {
+//     logging: false,  // Optional: Disable logging of SQL queries
+//   });
+
 sequelize.authenticate()
     .then(() => {
         console.log('✅ Database connected successfully.');
@@ -14,8 +18,6 @@ sequelize.authenticate()
     .catch((err) => {
         console.error('❌ Unable to connect to the database:', err);
     });
-sequelize.sync({ alter: true })
-    .then(() => console.log("✅ Database tables updated successfully!"))
-    .catch(err => console.error("❌ Error updating tables:", err));
+
 
 module.exports = sequelize;

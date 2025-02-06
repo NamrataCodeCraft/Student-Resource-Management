@@ -23,13 +23,12 @@ const University = sequelize.define(
         address: {
             type: DataTypes.STRING,
             allowNull: true
-
         }
     },
     {
         tableName: 'universities',
         timestamps: true,
-        paranoid: true,
+        // paranoid: true,
         freezeTableName: true,
         underscored: true
     }

@@ -25,7 +25,7 @@ const Course = sequelize.define(
     {
         tableName: 'courses',
         timestamps: true,
-        paranoid: true,
+        // paranoid: true,
         freezeTableName: true,
         underscored: true
     }
